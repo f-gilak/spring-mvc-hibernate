@@ -23,6 +23,9 @@
 </div>
 <div id="container">
     <div id="content">
+        <form:form action="${pageContext.request.contextPath}/logout" method="post">
+            <input type="submit" value="logout">
+        </form:form>
         <form:form action="search" method="get">
             Search customer:<input type="text" name="searchName"/>
             <input type="submit" value="Search" class="add-button">
