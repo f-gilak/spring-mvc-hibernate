@@ -12,7 +12,7 @@
 <head>
     <title>login</title>
     <style>
-        .failed{
+        .failed {
             color: #ff0000;
         }
     </style>

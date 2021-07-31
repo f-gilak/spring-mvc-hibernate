@@ -36,7 +36,7 @@
             <div style="padding-top: 30px" class="panel-body">
 
                 <!-- Login Form -->
-                <form:form action="${pageContext.request.contextPath}/authenticateTheUser" method="POST"
+                <form action="${pageContext.request.contextPath}/authenticateTheUser" method="POST"
                       class="form-horizontal">
 
                     <!-- Place for messages: error, alert etc ... -->
@@ -50,9 +50,9 @@
                                 </c:if>
 
                                 <c:if test="${param.logout !=null}">
-                                <div class="alert alert-success col-xs-offset-1 col-xs-10">
-                                    You have been logged out.
-                                </div>
+                                    <div class="alert alert-success col-xs-offset-1 col-xs-10">
+                                        You have been logged out.
+                                    </div>
                                 </c:if>
 
                             </div>
@@ -79,8 +79,8 @@
                             <button type="submit" class="btn btn-success">Login</button>
                         </div>
                     </div>
-
-                </form:form>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </form>
 
             </div>
 
