@@ -26,6 +26,11 @@
             <br><br>
             Role(s): <security:authentication property="principal.authorities"/>
         </p>
+        <hr>
+        <p>
+            <a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+            (Only for Manager peeps)
+        </p>
     </div>
 </div>
 <div id="container">

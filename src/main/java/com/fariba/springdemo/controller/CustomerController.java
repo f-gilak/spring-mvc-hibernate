@@ -50,10 +50,15 @@ public class CustomerController {
     }
 
     @GetMapping("/search")
-    public  String search(@RequestParam("searchName") String searchName,Model model){
-        List<Customer> customers=customerService.searchCustomers(searchName);
-        model.addAttribute("customers",customers);
+    public String search(@RequestParam("searchName") String searchName, Model model) {
+        List<Customer> customers = customerService.searchCustomers(searchName);
+        model.addAttribute("customers", customers);
         return "list-customer";
+    }
+
+    @GetMapping("/leaders")
+    public String showLeaders() {
+        return "leaders";
     }
 }
 
