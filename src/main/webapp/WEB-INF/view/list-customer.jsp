@@ -7,6 +7,7 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -19,6 +20,12 @@
 <div id="wrapper">
     <div id="header">
         <h2>CRM - Customer relationship Manager</h2>
+        <hr>
+        <p>
+            user: <security:authentication property="principal.username"/>
+            <br><br>
+            Role(s): <security:authentication property="principal.authorities"/>
+        </p>
     </div>
 </div>
 <div id="container">
