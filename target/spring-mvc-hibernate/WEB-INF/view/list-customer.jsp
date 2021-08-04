@@ -28,7 +28,7 @@
         </p>
         <hr>
         <p>
-            <a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+            <a href="${pageContext.request.contextPath}/customer/leaders">Leadership Meeting</a>
             (Only for Manager peeps)
         </p>
     </div>
