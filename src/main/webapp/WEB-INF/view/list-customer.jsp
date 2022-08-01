@@ -26,11 +26,20 @@
             <br><br>
             Role(s): <security:authentication property="principal.authorities"/>
         </p>
-        <hr>
-        <p>
-            <a href="${pageContext.request.contextPath}/customer/leaders">Leadership Meeting</a>
-            (Only for Manager peeps)
-        </p>
+        <security:authorize access="hasRole('MANAGER')">
+            <hr>
+            <p>
+                <a href="${pageContext.request.contextPath}/customer/leaders">Leadership Meeting</a>
+                (Only for Leadership peeps)
+            </p>
+        </security:authorize>
+        <security:authorize access="hasRole('ADMIN')">
+            <hr>
+            <p>
+                <a href="${pageContext.request.contextPath}/customer/systems">IT System Meeting</a>
+                (Only for Admin peeps)
+            </p>
+        </security:authorize>
     </div>
 </div>
 <div id="container">
@@ -64,7 +73,8 @@
                     <td>${tempCustomer.email}</td>
                     <td>
                         <a href="${updateLink}">Update</a>
-                        <a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>
+                        <a href="${deleteLink}"
+                           onclick="if(!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>
 
                     </td>
                 </tr>

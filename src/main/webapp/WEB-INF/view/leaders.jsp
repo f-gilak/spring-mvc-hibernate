@@ -14,6 +14,6 @@
 
 <hr>
 <p>Leaders Home page</p>
-<a href="${pageContext.request.contextPath}/customer">Back to list</a>
+<a href="${pageContext.request.contextPath}/customer/list">Back to list</a>
 </body>
 </html>
